@@ -11,33 +11,6 @@
 				"type": "constructor"
 			},
 			{
-				"inputs": [],
-				"name": "ECDSAInvalidSignature",
-				"type": "error"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "length",
-						"type": "uint256"
-					}
-				],
-				"name": "ECDSAInvalidSignatureLength",
-				"type": "error"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "bytes32",
-						"name": "s",
-						"type": "bytes32"
-					}
-				],
-				"name": "ECDSAInvalidSignatureS",
-				"type": "error"
-			},
-			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -124,65 +97,6 @@
 				"type": "error"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "deadline",
-						"type": "uint256"
-					}
-				],
-				"name": "ERC2612ExpiredSignature",
-				"type": "error"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "signer",
-						"type": "address"
-					},
-					{
-						"internalType": "address",
-						"name": "owner",
-						"type": "address"
-					}
-				],
-				"name": "ERC2612InvalidSigner",
-				"type": "error"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "account",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "currentNonce",
-						"type": "uint256"
-					}
-				],
-				"name": "InvalidAccountNonce",
-				"type": "error"
-			},
-			{
-				"inputs": [],
-				"name": "InvalidShortString",
-				"type": "error"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "string",
-						"name": "str",
-						"type": "string"
-					}
-				],
-				"name": "StringTooLong",
-				"type": "error"
-			},
-			{
 				"anonymous": false,
 				"inputs": [
 					{
@@ -209,12 +123,6 @@
 			},
 			{
 				"anonymous": false,
-				"inputs": [],
-				"name": "EIP712DomainChanged",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
 				"inputs": [
 					{
 						"indexed": true,
@@ -237,19 +145,6 @@
 				],
 				"name": "Transfer",
 				"type": "event"
-			},
-			{
-				"inputs": [],
-				"name": "DOMAIN_SEPARATOR",
-				"outputs": [
-					{
-						"internalType": "bytes32",
-						"name": "",
-						"type": "bytes32"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
 			},
 			{
 				"inputs": [
@@ -333,49 +228,6 @@
 			},
 			{
 				"inputs": [],
-				"name": "eip712Domain",
-				"outputs": [
-					{
-						"internalType": "bytes1",
-						"name": "fields",
-						"type": "bytes1"
-					},
-					{
-						"internalType": "string",
-						"name": "name",
-						"type": "string"
-					},
-					{
-						"internalType": "string",
-						"name": "version",
-						"type": "string"
-					},
-					{
-						"internalType": "uint256",
-						"name": "chainId",
-						"type": "uint256"
-					},
-					{
-						"internalType": "address",
-						"name": "verifyingContract",
-						"type": "address"
-					},
-					{
-						"internalType": "bytes32",
-						"name": "salt",
-						"type": "bytes32"
-					},
-					{
-						"internalType": "uint256[]",
-						"name": "extensions",
-						"type": "uint256[]"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
 				"name": "name",
 				"outputs": [
 					{
@@ -385,68 +237,6 @@
 					}
 				],
 				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "owner",
-						"type": "address"
-					}
-				],
-				"name": "nonces",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "owner",
-						"type": "address"
-					},
-					{
-						"internalType": "address",
-						"name": "spender",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "value",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "deadline",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint8",
-						"name": "v",
-						"type": "uint8"
-					},
-					{
-						"internalType": "bytes32",
-						"name": "r",
-						"type": "bytes32"
-					},
-					{
-						"internalType": "bytes32",
-						"name": "s",
-						"type": "bytes32"
-					}
-				],
-				"name": "permit",
-				"outputs": [],
-				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -531,21 +321,6 @@
 		],
 		"devdoc": {
 			"errors": {
-				"ECDSAInvalidSignature()": [
-					{
-						"details": "The signature derives the `address(0)`."
-					}
-				],
-				"ECDSAInvalidSignatureLength(uint256)": [
-					{
-						"details": "The signature has an invalid length."
-					}
-				],
-				"ECDSAInvalidSignatureS(bytes32)": [
-					{
-						"details": "The signature has an S value that is in the upper half order."
-					}
-				],
 				"ERC20InsufficientAllowance(address,uint256,uint256)": [
 					{
 						"details": "Indicates a failure with the `spender`’s `allowance`. Used in transfers.",
@@ -597,29 +372,11 @@
 							"spender": "Address that may be allowed to operate on tokens without being their owner."
 						}
 					}
-				],
-				"ERC2612ExpiredSignature(uint256)": [
-					{
-						"details": "Permit deadline has expired."
-					}
-				],
-				"ERC2612InvalidSigner(address,address)": [
-					{
-						"details": "Mismatched signature."
-					}
-				],
-				"InvalidAccountNonce(address,uint256)": [
-					{
-						"details": "The nonce used for an `account` is not the expected current nonce."
-					}
 				]
 			},
 			"events": {
 				"Approval(address,address,uint256)": {
 					"details": "Emitted when the allowance of a `spender` for an `owner` is set by a call to {approve}. `value` is the new allowance."
-				},
-				"EIP712DomainChanged()": {
-					"details": "MAY be emitted to signal that the domain could have changed."
 				},
 				"Transfer(address,address,uint256)": {
 					"details": "Emitted when `value` tokens are moved from one account (`from`) to another (`to`). Note that `value` may be zero."
@@ -627,9 +384,6 @@
 			},
 			"kind": "dev",
 			"methods": {
-				"DOMAIN_SEPARATOR()": {
-					"details": "Returns the domain separator used in the encoding of the signature for {permit}, as defined by {EIP712}."
-				},
 				"allowance(address,address)": {
 					"details": "Returns the remaining number of tokens that `spender` will be allowed to spend on behalf of `owner` through {transferFrom}. This is zero by default. This value changes when {approve} or {transferFrom} are called."
 				},
@@ -642,17 +396,8 @@
 				"decimals()": {
 					"details": "Returns the number of decimals used to get its user representation. For example, if `decimals` equals `2`, a balance of `505` tokens should be displayed to a user as `5.05` (`505 / 10 ** 2`). Tokens usually opt for a value of 18, imitating the relationship between Ether and Wei. This is the default value returned by this function, unless it's overridden. NOTE: This information is only used for _display_ purposes: it in no way affects any of the arithmetic of the contract, including {IERC20-balanceOf} and {IERC20-transfer}."
 				},
-				"eip712Domain()": {
-					"details": "returns the fields and values that describe the domain separator used by this contract for EIP-712 signature."
-				},
 				"name()": {
 					"details": "Returns the name of the token."
-				},
-				"nonces(address)": {
-					"details": "Returns the current nonce for `owner`. This value must be included whenever a signature is generated for {permit}. Every successful call to {permit} increases ``owner``'s nonce by one. This prevents a signature from being used multiple times."
-				},
-				"permit(address,address,uint256,uint256,uint8,bytes32,bytes32)": {
-					"details": "Sets `value` as the allowance of `spender` over ``owner``'s tokens, given ``owner``'s signed approval. IMPORTANT: The same issues {IERC20-approve} has related to transaction ordering also apply here. Emits an {Approval} event. Requirements: - `spender` cannot be the zero address. - `deadline` must be a timestamp in the future. - `v`, `r` and `s` must be a valid `secp256k1` signature from `owner` over the EIP712-formatted function arguments. - the signature must use ``owner``'s current nonce (see {nonces}). For more information on the signature format, see the https://eips.ethereum.org/EIPS/eip-2612#specification[relevant EIP section]. CAUTION: See Security Considerations above."
 				},
 				"symbol()": {
 					"details": "Returns the symbol of the token, usually a shorter version of the name."
@@ -844,11 +589,11 @@
 			]
 		},
 		"contracts/MyToken.sol": {
-			"keccak256": "0x78735c82268e3ddcb8d1894d1dc1769012a390793f99d058bdd9dd5ce0a716bb",
+			"keccak256": "0xa473174688a0dabc4558d449e2ab1ca8244a50da1758c097c3a9f6ecae1d4ea3",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://27c5457ed565dec3163ebb47aa6d2139781c3d5fe5e06649bd5e90062978e378",
-				"dweb:/ipfs/QmVpDwBtNFgLfVdgwT2hHkvFYw1ikUUqARVFzVvzySXz2b"
+				"bzz-raw://34076db03d5a03eedb4a4c43ea4530171e1492b3574d0015525cdf944aeba606",
+				"dweb:/ipfs/QmSLRUKMDZawhjGryZsuabfrRZvNv31Kcu7vPmhbmBKrdP"
 			]
 		}
 	},
